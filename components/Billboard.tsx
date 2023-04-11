@@ -4,16 +4,9 @@ import { AiOutlineInfoCircle } from 'react-icons/ai'
 
 
 const Billboard = () => {
-  const { data, isLoading } = useBillboard();
+  const { data } = useBillboard();
 
-  console.log('data', data);
   
-  if (isLoading) {
-    return (
-      <div>Loading</div>
-    )
-  }
-
   return (
     <div className="relative h-[56.25vh]">
       <video
@@ -26,8 +19,8 @@ const Billboard = () => {
         autoPlay
         muted
         loop
-        poster="http://uhdtv.io/wp-content/uploads/2020/10/Sintel-3.jpg" 
-        src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/Sintel.mp4">
+        poster={data?.thumbnailUrl}
+        src={data?.videoUrl}>
       </video>
       <div
         className="
