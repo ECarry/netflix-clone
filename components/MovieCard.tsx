@@ -67,7 +67,7 @@ const MovieCard: React.FC<MovieCardProps> = ({ data }) => {
             rounded-b-md
           "
         >
-          {/* PLAY BUTTON  */}
+          {/* PLAY BUTTON */}
           <div className="felx flex-row items-center gap-3 ">
             <div
               className="
