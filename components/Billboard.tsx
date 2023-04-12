@@ -8,11 +8,11 @@ const Billboard = () => {
 
   
   return (
-    <div className="relative h-[56.25vh]">
+    <div className="relative h-[56.25vw]">
       <video
         className="
           w-full
-          h-[56.25vh]
+          h-[56.25vw]
           object-cover
           brightness-[60%]
         "
