@@ -1,5 +1,6 @@
 import React from "react";
 import { BsFillPlayFill } from "react-icons/bs";
+import FavoriteButton from "./FavoriteButton";
 
 interface MovieCardProps {
   data: Record<string, any>;
@@ -67,8 +68,8 @@ const MovieCard: React.FC<MovieCardProps> = ({ data }) => {
             rounded-b-md
           "
         >
-          {/* PLAY BUTTON */}
-          <div className="felx flex-row items-center gap-3 ">
+          {/* BUTTON */}
+          <div className="flex flex-row items-center gap-3 ">
             <div
               className="
                 flex
@@ -87,6 +88,7 @@ const MovieCard: React.FC<MovieCardProps> = ({ data }) => {
             >
               <BsFillPlayFill size={30} />
             </div>
+            <FavoriteButton movieId={ data?.id } />
           </div>
 
           {/* NEW 2023 ICON */}
